@@ -1,0 +1,17 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.blink {
+  animation: blinking 0.5s step-end infinite alternate;
+}
+
+@keyframes blinking {
+  50% {
+    border-color: #bb4430;
+  }
+}
