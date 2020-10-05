@@ -57,12 +57,19 @@ const generateNumbers = (amount, range) => {
   const myArray = [];
 
   let randomNumber = rngSeed.nextRange(1, range);
+  console.log(randomNumber);
 
   //Only unique numbers
   let i = 0;
   while (i < amount) {
     myArray.push(randomNumber);
-    randomNumber = rngSeed.nextRange(1, range);
+    //if the first one is <= 3 the rest are in that range as well
+    if (randomNumber <= 3) {
+      randomNumber = rngSeed.nextRange(1, 4);
+      //if the first one is > 3 the rest are in that range as well
+    } else if (randomNumber > 3) {
+      randomNumber = rngSeed.nextRange(4, range);
+    }
     i++;
   }
 
@@ -72,7 +79,7 @@ const generateNumbers = (amount, range) => {
 
 submitBtn.addEventListener('click', () => {
   if (name1.value !== '' && name2.value !== '') {
-    generateNumbers(5, 6);
+    generateNumbers(5, 7);
     validation(true);
   } else {
     validation(false);
