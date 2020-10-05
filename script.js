@@ -1,6 +1,7 @@
 const name1 = document.querySelector('#name1');
 const name2 = document.querySelector('#name2');
 const submitBtn = document.querySelector('#submitBtn');
+const clearInput = document.querySelector('#clearInput');
 
 //RNG
 class RNG {
@@ -72,34 +73,35 @@ const generateNumbers = (amount, range) => {
 submitBtn.addEventListener('click', () => {
   if (name1.value !== '' && name2.value !== '') {
     generateNumbers(5, 6);
+    validation(true);
   } else {
-    name1.classList.add('blink');
+    validation(false);
   }
 });
 
-/*
-const validation = link => {
-  //display link button only if there are numbers on display
+//clear all inputs
+
+clearInput.addEventListener('click', () => {
+  name1.value = '';
+  name2.value = '';
+});
+
+const validation = valid => {
   if (valid) {
-    firstName.classList.remove('blink');
-    input2.classList.remove('blink');
-    setTimeout(function() {
-      playNow.style.visibility = 'visible';
-      playNowLink.href = link;
-      playNowLink.textContent = 'Play';
-    }, 1500);
+    name1.classList.remove('blink');
+    name2.classList.remove('blink');
+
     //highlight unfilled inputs
   } else {
-    if (firstName.value === '') {
-      firstName.classList.add('blink');
+    if (name1.value === '') {
+      name1.classList.add('blink');
     } else {
-      firstName.classList.remove('blink');
+      name1.classList.remove('blink');
     }
-    if (input2.value === '') {
-      input2.classList.add('blink');
+    if (name2.value === '') {
+      name2.classList.add('blink');
     } else {
-      input2.classList.remove('blink');
+      name2.classList.remove('blink');
     }
   }
 };
-*/
