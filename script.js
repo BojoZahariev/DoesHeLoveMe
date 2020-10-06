@@ -67,15 +67,31 @@ const generateNumbers = (amount, range) => {
 
 //display the results
 const displayResults = arr => {
-  let resPart = document.querySelectorAll('.resultsPart');
+  let resParts = document.querySelectorAll('.resultsPart');
   //const listArray = Array.from(resPart);
 
+  /*
   resPart.forEach(element => {
     setTimeout(() => {
       console.log('ding');
       element.style.display = 'block';
     }, 1000);
   });
+
+*/
+  let i = 0;
+
+  const myLoop = () => {
+    setTimeout(() => {
+      resParts[i].style.display = 'block';
+      i++;
+      if (i < resParts.length) {
+        myLoop();
+      }
+    }, 300);
+  };
+
+  myLoop(); //  start the loop
 
   /*
   arr.forEach(element => {
