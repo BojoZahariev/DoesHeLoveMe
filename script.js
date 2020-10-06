@@ -39,17 +39,6 @@ const generateNumbers = (amount, range) => {
   //get the number for the day from the date
   let todayNumber = currentDate.getDate() + currentDate.getMonth() + 1 + currentDate.getFullYear();
 
-  //Numeric value of the name
-  const letterToNumber = str => {
-    str = str.toLowerCase();
-    let sum = 0;
-    for (let i = 0; i < str.length; i++) {
-      sum += str.charCodeAt(i);
-    }
-
-    return sum;
-  };
-
   //lucky numbers change every day
   let rngSeed = new RNG(letterToNumber(name1.value) + letterToNumber(name2.value) + todayNumber);
 
@@ -57,7 +46,6 @@ const generateNumbers = (amount, range) => {
   const myArray = [];
 
   let randomNumber = rngSeed.nextRange(1, range);
-  console.log(randomNumber);
 
   //Only unique numbers
   let i = 0;
@@ -75,6 +63,17 @@ const generateNumbers = (amount, range) => {
 
   //displayNumbers(myArray, amount);
   console.log(myArray);
+};
+
+//Numeric value of the name
+const letterToNumber = str => {
+  str = str.toLowerCase();
+  let sum = 0;
+  for (let i = 0; i < str.length; i++) {
+    sum += str.charCodeAt(i);
+  }
+
+  return sum;
 };
 
 submitBtn.addEventListener('click', () => {
