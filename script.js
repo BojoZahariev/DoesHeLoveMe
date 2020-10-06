@@ -91,9 +91,14 @@ const displayResults = arr => {
 
     let i = 0;
     resParts.forEach(element => {
-      let heart = document.createElement('span');
-      heart.textContent = arr[i];
-      element.appendChild(heart);
+      let k = 0;
+      while (k < arr[i]) {
+        let heart = document.createElement('span');
+        heart.classList.add('hearts');
+        heart.textContent = 'h';
+        element.appendChild(heart);
+        k++;
+      }
       i++;
     });
   };
@@ -128,14 +133,15 @@ clearInput.addEventListener('click', () => {
 });
 
 const clearResults = () => {
+  //clear list
   document.querySelectorAll('.resultsPart').forEach(element => {
     element.style.display = 'none';
   });
-  /*
-  while (results.firstChild.style.display) {
-    results.removeChild(results.firstChild);
-  }
-  */
+
+  //clear hearts
+  document.querySelectorAll('.hearts').forEach(element => {
+    element.style.display = 'none';
+  });
 };
 
 const validation = valid => {
