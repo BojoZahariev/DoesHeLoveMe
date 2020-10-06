@@ -79,20 +79,24 @@ const displayResults = arr => {
       if (i < resParts.length) {
         myLoop();
       } else {
-        console.log('done');
+        addHearts(arr);
       }
     }, 300);
   };
 
-  myLoop(); //  start the loop
+  myLoop();
 
-  /*
-  arr.forEach(element => {
-    let part = document.createElement('li');
-    part.textContent = element;
-    results.appendChild(part);
-  });
-  */
+  const addHearts = arr => {
+    console.log(arr);
+
+    let i = 0;
+    resParts.forEach(element => {
+      let heart = document.createElement('span');
+      heart.textContent = arr[i];
+      element.appendChild(heart);
+      i++;
+    });
+  };
 };
 
 //Numeric value of the name
