@@ -70,15 +70,6 @@ const displayResults = arr => {
   let resParts = document.querySelectorAll('.resultsPart');
   //const listArray = Array.from(resPart);
 
-  /*
-  resPart.forEach(element => {
-    setTimeout(() => {
-      console.log('ding');
-      element.style.display = 'block';
-    }, 1000);
-  });
-
-*/
   let i = 0;
 
   const myLoop = () => {
@@ -87,6 +78,8 @@ const displayResults = arr => {
       i++;
       if (i < resParts.length) {
         myLoop();
+      } else {
+        console.log('done');
       }
     }, 300);
   };
