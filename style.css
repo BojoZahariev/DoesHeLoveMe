@@ -64,6 +64,7 @@ input:focus {
   text-align: center;
 }
 
-.results {
+#results {
+  text-align: center;
   color: #c1292e;
 }

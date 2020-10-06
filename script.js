@@ -2,6 +2,7 @@ const name1 = document.querySelector('#name1');
 const name2 = document.querySelector('#name2');
 const submitBtn = document.querySelector('#submitBtn');
 const clearInput = document.querySelector('#clearInput');
+const results = document.querySelector('#results');
 
 //RNG
 class RNG {
@@ -61,8 +62,16 @@ const generateNumbers = (amount, range) => {
     i++;
   }
 
-  //displayNumbers(myArray, amount);
-  console.log(myArray);
+  displayResults(myArray);
+};
+
+//display the results
+const displayResults = arr => {
+  arr.forEach(element => {
+    let part = document.createElement('li');
+    part.textContent = element;
+    results.appendChild(part);
+  });
 };
 
 //Numeric value of the name
@@ -77,6 +86,8 @@ const letterToNumber = str => {
 };
 
 submitBtn.addEventListener('click', () => {
+  clearResults();
+
   if (name1.value !== '' && name2.value !== '') {
     generateNumbers(5, 7);
     validation(true);
@@ -85,12 +96,17 @@ submitBtn.addEventListener('click', () => {
   }
 });
 
-//clear all inputs
-
+//clear inputs
 clearInput.addEventListener('click', () => {
   name1.value = '';
   name2.value = '';
 });
+
+const clearResults = () => {
+  while (results.firstChild) {
+    results.removeChild(results.firstChild);
+  }
+};
 
 const validation = valid => {
   if (valid) {
