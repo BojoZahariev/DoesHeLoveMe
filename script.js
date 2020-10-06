@@ -67,11 +67,23 @@ const generateNumbers = (amount, range) => {
 
 //display the results
 const displayResults = arr => {
+  let resPart = document.querySelectorAll('.resultsPart');
+  //const listArray = Array.from(resPart);
+
+  resPart.forEach(element => {
+    setTimeout(() => {
+      console.log('ding');
+      element.style.display = 'block';
+    }, 1000);
+  });
+
+  /*
   arr.forEach(element => {
     let part = document.createElement('li');
     part.textContent = element;
     results.appendChild(part);
   });
+  */
 };
 
 //Numeric value of the name
@@ -103,9 +115,14 @@ clearInput.addEventListener('click', () => {
 });
 
 const clearResults = () => {
-  while (results.firstChild) {
+  document.querySelectorAll('.resultsPart').forEach(element => {
+    element.style.display = 'none';
+  });
+  /*
+  while (results.firstChild.style.display) {
     results.removeChild(results.firstChild);
   }
+  */
 };
 
 const validation = valid => {

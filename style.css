@@ -67,4 +67,11 @@ input:focus {
 #results {
   text-align: center;
   color: #c1292e;
+  padding: 20px;
+  list-style: none;
+}
+
+.resultsPart {
+  color: #222;
+  display: none;
 }
