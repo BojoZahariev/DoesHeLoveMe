@@ -68,7 +68,6 @@ const generateNumbers = (amount, range) => {
 //display the results
 const displayResults = arr => {
   let resParts = document.querySelectorAll('.resultsPart');
-  //const listArray = Array.from(resPart);
 
   let i = 0;
 
@@ -79,35 +78,48 @@ const displayResults = arr => {
       if (i < resParts.length) {
         myLoop();
       } else {
-        addHearts(arr);
+        addHearts(arr, resParts);
       }
     }, 300);
   };
 
   myLoop();
+};
 
-  const addHearts = arr => {
-    console.log(arr);
+//display the hearts
+const addHearts = (arr, parent) => {
+  console.log(arr);
 
-    let i = 0;
-    resParts.forEach(element => {
-      let hearts = element.querySelectorAll('.hearts');
-      //display the hearts
-      hearts.forEach(element => {
-        element.style.display = 'block';
-        element.src = 'images/emptyHeart.png';
-      });
+  let i = 0;
+  parent.forEach(element => {
+    let hearts = element.querySelectorAll('.hearts');
 
-      let k = 0;
-      while (k < arr[i]) {
-        //change to full hearts according to the score
-        hearts[k].src = 'images/redHeart.png';
+    let b = 0;
+    const myLoop = () => {
+      setTimeout(() => {
+        hearts[b].style.display = 'block';
+        hearts[b].src = 'images/emptyHeart.png';
 
-        k++;
-      }
-      i++;
-    });
-  };
+        b++;
+
+        if (b < hearts.length) {
+          myLoop();
+        } else {
+          let k = 0;
+          while (k < arr[i]) {
+            //change to full hearts according to the score
+
+            hearts[k].src = 'images/redHeart.png';
+
+            k++;
+          }
+          i++;
+        }
+      }, 300);
+    };
+
+    myLoop();
+  });
 };
 
 //Numeric value of the name
