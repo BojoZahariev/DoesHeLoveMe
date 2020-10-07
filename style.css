@@ -75,3 +75,12 @@ input:focus {
   color: #222;
   display: none;
 }
+
+svg {
+  width: 50px;
+  height: auto;
+}
+
+#inside {
+  fill: #e86436;
+}
