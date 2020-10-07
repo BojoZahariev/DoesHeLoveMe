@@ -91,12 +91,18 @@ const displayResults = arr => {
 
     let i = 0;
     resParts.forEach(element => {
+      let hearts = element.querySelectorAll('.hearts');
+      //display the hearts
+      hearts.forEach(element => {
+        element.style.display = 'block';
+        element.src = 'images/emptyHeart.png';
+      });
+
       let k = 0;
       while (k < arr[i]) {
-        let heart = document.createElement('img');
-        heart.classList.add('hearts');
-        heart.src = 'images/redHeart.png';
-        element.appendChild(heart);
+        //change to full hearts according to the score
+        hearts[k].src = 'images/redHeart.png';
+
         k++;
       }
       i++;

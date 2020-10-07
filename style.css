@@ -68,24 +68,29 @@ input:focus {
   text-align: center;
   padding: 20px;
   list-style: none;
+  width: 350px;
+  margin: auto;
 }
 
 .resultsPart {
   color: #222;
   padding: 2px;
+
   display: none;
-  justify-content: center;
+
+  justify-content: flex-start;
   align-items: center;
 }
 
 .partTitle {
-  font-size: 20px;
+  font-size: 25px;
   padding: 5px;
   display: inline-block;
 }
 
 .hearts {
   width: 30px;
+  padding: 2px;
   height: auto;
 }
 
