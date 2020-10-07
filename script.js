@@ -108,13 +108,7 @@ const addHearts = (arr, parent) => {
 
           //change to full hearts according to the score
         } else {
-          let hearts = element.querySelectorAll('.hearts');
-
-          let k = 0;
-          while (k < arr[i]) {
-            hearts[k].src = 'images/redHeart.png';
-            k++;
-          }
+          fillHearts(element, arr, i);
           i++;
         }
       }, 300);
@@ -122,6 +116,17 @@ const addHearts = (arr, parent) => {
 
     myLoop();
   });
+};
+
+//change to full hearts according to the score
+const fillHearts = (parent, arr, ind) => {
+  let hearts = parent.querySelectorAll('.hearts');
+
+  let k = 0;
+  while (k < arr[ind]) {
+    hearts[k].src = 'images/redHeart.png';
+    k++;
+  }
 };
 
 //Numeric value of the name
