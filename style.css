@@ -73,14 +73,16 @@ input:focus {
 
 .resultsPart {
   color: #222;
+  /*
   display: none;
+  */
 }
 
-svg {
-  width: 50px;
+.hearts {
+  width: 30px;
   height: auto;
 }
 
 #inside {
-  fill: #e86436;
+  fill: #ee2e31;
 }
