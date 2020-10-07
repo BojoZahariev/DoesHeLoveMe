@@ -80,7 +80,7 @@ const displayResults = arr => {
       } else {
         addHearts(arr, resParts);
       }
-    }, 300);
+    }, 200);
   };
 
   myLoop();
@@ -92,25 +92,27 @@ const addHearts = (arr, parent) => {
 
   let i = 0;
   parent.forEach(element => {
-    let hearts = element.querySelectorAll('.hearts');
-
     let b = 0;
     const myLoop = () => {
       setTimeout(() => {
-        hearts[b].style.display = 'block';
-        hearts[b].src = 'images/emptyHeart.png';
+        let heart = document.createElement('img');
+        heart.classList.add('hearts');
+        heart.alt = 'heart';
+        heart.src = 'images/emptyHeart.png';
+        element.appendChild(heart);
 
         b++;
 
-        if (b < hearts.length) {
+        if (b < 6) {
           myLoop();
+
+          //change to full hearts according to the score
         } else {
+          let hearts = element.querySelectorAll('.hearts');
+
           let k = 0;
           while (k < arr[i]) {
-            //change to full hearts according to the score
-
             hearts[k].src = 'images/redHeart.png';
-
             k++;
           }
           i++;
@@ -158,7 +160,7 @@ const clearResults = () => {
 
   //clear hearts
   document.querySelectorAll('.hearts').forEach(element => {
-    element.style.display = 'none';
+    element.remove();
   });
 };
 
