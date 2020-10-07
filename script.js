@@ -74,7 +74,7 @@ const displayResults = arr => {
 
   const myLoop = () => {
     setTimeout(() => {
-      resParts[i].style.display = 'block';
+      resParts[i].style.display = 'flex';
       i++;
       if (i < resParts.length) {
         myLoop();
@@ -93,9 +93,9 @@ const displayResults = arr => {
     resParts.forEach(element => {
       let k = 0;
       while (k < arr[i]) {
-        let heart = document.createElement('span');
+        let heart = document.createElement('img');
         heart.classList.add('hearts');
-        heart.textContent = 'h';
+        heart.src = 'images/redHeart.png';
         element.appendChild(heart);
         k++;
       }
