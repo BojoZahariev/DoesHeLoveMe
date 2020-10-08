@@ -2,8 +2,11 @@ const formContainer = document.querySelector('#formContainer');
 const name1 = document.querySelector('#name1');
 const name2 = document.querySelector('#name2');
 const clearInput = document.querySelector('#clearInput');
+const submitBtn = document.querySelector('#submitBtn');
+const btnDiv = document.querySelector('#btnDiv');
 const results = document.querySelector('#results');
 const daisy = document.querySelector('#daisy');
+const comments = document.querySelector('#comments');
 
 //RNG
 class RNG {
@@ -132,6 +135,11 @@ const fillHearts = (parent, arr, ind) => {
     hearts[k].classList.toggle('emptyHearts');
     k++;
   }
+
+  comments.style.display = 'block';
+  //clearInput.style.display = 'inline-block';
+  //submitBtn.style.display = 'inline-block';
+  btnDiv.style.visibility = 'visible';
 };
 
 //Numeric value of the name
@@ -150,7 +158,11 @@ formContainer.addEventListener('submit', e => {
   clearResults();
 
   if (name1.value !== '' && name2.value !== '') {
+    //clearInput.style.display = 'none';
+    //submitBtn.style.display = 'none';
+    btnDiv.style.visibility = 'hidden';
     daisy.style.display = 'inline-block';
+
     setTimeout(() => {
       generateNumbers(5, 7);
       validation(true);
@@ -165,6 +177,7 @@ formContainer.addEventListener('submit', e => {
 clearInput.addEventListener('click', () => {
   name1.value = '';
   name2.value = '';
+
   clearResults();
 });
 
@@ -178,6 +191,8 @@ const clearResults = () => {
   document.querySelectorAll('.hearts').forEach(element => {
     element.remove();
   });
+
+  comments.style.display = 'none';
 };
 
 const validation = valid => {
