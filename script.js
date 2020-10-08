@@ -3,6 +3,7 @@ const name2 = document.querySelector('#name2');
 const submitBtn = document.querySelector('#submitBtn');
 const clearInput = document.querySelector('#clearInput');
 const results = document.querySelector('#results');
+const daisy = document.querySelector('#daisy');
 
 //RNG
 class RNG {
@@ -146,8 +147,12 @@ submitBtn.addEventListener('click', () => {
   clearResults();
 
   if (name1.value !== '' && name2.value !== '') {
-    generateNumbers(5, 7);
-    validation(true);
+    daisy.style.display = 'inline-block';
+    setTimeout(() => {
+      generateNumbers(5, 7);
+      validation(true);
+      daisy.style.display = 'none';
+    }, 1500);
   } else {
     validation(false);
   }
