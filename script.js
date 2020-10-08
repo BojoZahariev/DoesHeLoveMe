@@ -110,8 +110,10 @@ const addHearts = (arr, parent) => {
 
           //change to full hearts according to the score
         } else {
-          fillHearts(element, arr, i);
-          i++;
+          setTimeout(() => {
+            fillHearts(element, arr, i);
+            i++;
+          }, 500);
         }
       }, 300);
     };
