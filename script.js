@@ -153,10 +153,11 @@ submitBtn.addEventListener('click', () => {
   }
 });
 
-//clear inputs
+//clear inputs and results
 clearInput.addEventListener('click', () => {
   name1.value = '';
   name2.value = '';
+  clearResults();
 });
 
 const clearResults = () => {
