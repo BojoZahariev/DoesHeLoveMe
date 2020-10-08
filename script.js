@@ -99,6 +99,7 @@ const addHearts = (arr, parent) => {
         heart.classList.add('hearts');
         heart.alt = 'heart';
         heart.src = 'images/emptyHeart.png';
+        heart.classList.add('emptyHearts');
         element.appendChild(heart);
 
         b++;
@@ -125,6 +126,7 @@ const fillHearts = (parent, arr, ind) => {
   let k = 0;
   while (k < arr[ind]) {
     hearts[k].src = 'images/redHeart.png';
+    hearts[k].classList.toggle('emptyHearts');
     k++;
   }
 };

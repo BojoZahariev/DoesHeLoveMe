@@ -94,6 +94,10 @@ input:focus {
   height: auto;
 }
 
+.emptyHearts {
+  filter: opacity(0.5);
+}
+
 #inside {
   fill: #ee2e31;
 }
