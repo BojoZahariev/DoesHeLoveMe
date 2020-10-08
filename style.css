@@ -61,7 +61,9 @@ input:focus {
 }
 
 .btnDiv {
+  width: 100%;
   text-align: center;
+  padding: 10px;
 }
 
 #results {
@@ -73,7 +75,7 @@ input:focus {
 }
 
 .resultsPart {
-  color: #222;
+  color: #1c3144;
   padding: 2px;
 
   display: none;

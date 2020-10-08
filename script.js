@@ -1,6 +1,6 @@
+const formContainer = document.querySelector('#formContainer');
 const name1 = document.querySelector('#name1');
 const name2 = document.querySelector('#name2');
-const submitBtn = document.querySelector('#submitBtn');
 const clearInput = document.querySelector('#clearInput');
 const results = document.querySelector('#results');
 const daisy = document.querySelector('#daisy');
@@ -145,7 +145,8 @@ const letterToNumber = str => {
   return sum;
 };
 
-submitBtn.addEventListener('click', () => {
+formContainer.addEventListener('submit', e => {
+  e.preventDefault();
   clearResults();
 
   if (name1.value !== '' && name2.value !== '') {
