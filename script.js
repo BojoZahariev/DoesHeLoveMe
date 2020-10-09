@@ -158,12 +158,12 @@ formContainer.addEventListener('submit', e => {
   clearResults();
 
   btnDiv.style.visibility = 'hidden';
-  daisy.style.display = 'inline-block';
+  daisy.classList.add('spin');
 
   setTimeout(() => {
     generateNumbers(5, 7);
 
-    daisy.style.display = 'none';
+    daisy.classList.remove('spin');
   }, 1500);
 });
 

@@ -55,10 +55,11 @@ input:focus {
 */
 
 input {
+  text-transform: uppercase;
   width: 200px;
   height: 50px;
   border: none;
-  border-radius: 20px;
+  border-radius: 15px;
   outline: none;
   font-size: 20px;
   padding: 3px 20px;
@@ -71,7 +72,7 @@ input {
 
 #btnDiv {
   width: 100%;
-  height: 100px;
+  height: 60px;
   text-align: center;
   padding: 10px;
 }
@@ -115,10 +116,12 @@ input {
 }
 
 #daisy {
-  width: 200px;
+  width: 100px;
+}
+
+.spin {
   -webkit-animation: spin 3s linear infinite;
   animation: spin 3s linear infinite;
-  display: none;
 }
 
 @-webkit-keyframes spin {
