@@ -157,20 +157,14 @@ formContainer.addEventListener('submit', e => {
   e.preventDefault();
   clearResults();
 
-  if (name1.value !== '' && name2.value !== '') {
-    //clearInput.style.display = 'none';
-    //submitBtn.style.display = 'none';
-    btnDiv.style.visibility = 'hidden';
-    daisy.style.display = 'inline-block';
+  btnDiv.style.visibility = 'hidden';
+  daisy.style.display = 'inline-block';
 
-    setTimeout(() => {
-      generateNumbers(5, 7);
-      validation(true);
-      daisy.style.display = 'none';
-    }, 1500);
-  } else {
-    validation(false);
-  }
+  setTimeout(() => {
+    generateNumbers(5, 7);
+
+    daisy.style.display = 'none';
+  }, 1500);
 });
 
 //clear inputs and results
@@ -193,24 +187,4 @@ const clearResults = () => {
   });
 
   comments.style.display = 'none';
-};
-
-const validation = valid => {
-  if (valid) {
-    name1.classList.remove('blink');
-    name2.classList.remove('blink');
-
-    //highlight unfilled inputs
-  } else {
-    if (name1.value === '') {
-      name1.classList.add('blink');
-    } else {
-      name1.classList.remove('blink');
-    }
-    if (name2.value === '') {
-      name2.classList.add('blink');
-    } else {
-      name2.classList.remove('blink');
-    }
-  }
 };
