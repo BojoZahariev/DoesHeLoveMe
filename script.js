@@ -137,8 +137,11 @@ const fillHearts = (parent, arr, ind) => {
   }
 
   comments.style.display = 'block';
-  //clearInput.style.display = 'inline-block';
-  //submitBtn.style.display = 'inline-block';
+  if (arr[0] < 4) {
+    comments.textContent = 'Bad result';
+  } else {
+    comments.textContent = 'Good result';
+  }
   btnDiv.style.visibility = 'visible';
 };
 
