@@ -86,13 +86,13 @@ input:focus {
   text-align: center;
   padding: 20px;
   list-style: none;
-  width: 430px;
+  width: 400px;
   margin: auto;
 }
 
 .resultsPart {
   color: #1c3144;
-  padding: 2px;
+  padding: 5px;
   display: none;
   justify-content: flex-start;
   align-items: center;
@@ -100,7 +100,7 @@ input:focus {
 
 .partTitle {
   font-size: 25px;
-  padding: 5px;
+  padding: 2px;
   width: 160px;
   display: inline-block;
   text-align: left;
