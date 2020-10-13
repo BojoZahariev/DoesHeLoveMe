@@ -63,8 +63,8 @@ input:focus {
 }
 
 button {
-  font-family: 'Fascinate Inline', cursive;
   font-size: 20px;
+  width: 80px;
   appearance: none;
   background: linear-gradient(to bottom, #ea526f, #ca2b48);
   border: none;
@@ -75,12 +75,12 @@ button {
   user-select: none;
   cursor: pointer;
   z-index: 1;
-  box-shadow: 0 0 1em rgba(white, 0.2);
+  box-shadow: 0 0 1em rgba(white, 0.5);
   transition: transform 0.1s cubic-bezier(0.5, 0, 0.5, 1), box-shadow 0.2s;
   outline: none;
 }
 button:hover {
-  box-shadow: 0 0 25px #fff;
+  box-shadow: 0 0 25px #ea526f;
 }
 
 button:active {
