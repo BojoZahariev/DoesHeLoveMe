@@ -17,17 +17,11 @@ html {
   font-size: 80px;
   font-weight: 700;
   text-align: center;
-}
-
-#small-title {
-  text-align: center;
-  font-size: 30px;
-  color: #222;
-  margin: 0px auto 10px;
+  margin-bottom: 30px;
 }
 
 #formContainer {
-  margin: 50px auto 10px;
+  margin: 0px auto 10px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -59,31 +53,31 @@ input:focus {
   width: 100%;
   height: 60px;
   text-align: center;
-  padding: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
 }
 
-button {
+.mainBtn {
   font-size: 20px;
   width: 80px;
-  appearance: none;
-  background: linear-gradient(to bottom, #ea526f, #ca2b48);
+  background: linear-gradient(to bottom, #ea526f, #aa1933);
   border: none;
+  user-select: none;
   color: #fff;
   border-radius: 30px;
   padding: 5px 15px;
   overflow: hidden;
-  user-select: none;
   cursor: pointer;
-  z-index: 1;
   box-shadow: 0 0 1em rgba(white, 0.5);
   transition: transform 0.1s cubic-bezier(0.5, 0, 0.5, 1), box-shadow 0.2s;
   outline: none;
+  margin: 5px;
 }
-button:hover {
+.mainBtn:hover {
   box-shadow: 0 0 25px #ea526f;
 }
 
-button:active {
+.mainBtn:active {
   transform: scale(0.9) translateY(5%);
   transition-timing-function: cubic-bezier(0.5, 0, 0.5, 1);
 }
