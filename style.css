@@ -8,6 +8,8 @@
 
 .bigContainer {
   font-family: 'Redressed', cursive;
+  max-width: 600px;
+  margin: auto;
 }
 
 html {
@@ -64,6 +66,7 @@ input:focus {
 
 .mainBtn {
   font-size: 20px;
+  font-family: 'Cardo', serif;
   width: 80px;
   background: linear-gradient(to bottom, #ea526f, #aa1933);
   border: none;
@@ -71,16 +74,13 @@ input:focus {
   color: #fff;
   border-radius: 30px;
   padding: 5px 15px;
-  overflow: hidden;
   cursor: pointer;
-  box-shadow: 0 0 1em rgba(white, 0.5);
   transition: transform 0.1s cubic-bezier(0.5, 0, 0.5, 1), box-shadow 0.2s;
   outline: none;
-  margin: 5px;
-  font-family: 'Cardo', serif;
+  margin: 10px;
 }
 .mainBtn:hover {
-  box-shadow: 0 0 25px #ea526f;
+  box-shadow: 0 0 20px #ea526f;
 }
 
 .mainBtn:active {
