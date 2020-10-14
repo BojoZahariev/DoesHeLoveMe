@@ -7,7 +7,6 @@ const btnDiv = document.querySelector('#btnDiv');
 const results = document.querySelector('#results');
 const daisy = document.querySelector('#daisy');
 const comments = document.querySelector('#comments');
-const commentsText = document.querySelector('#commentsText');
 
 //RNG
 class RNG {
@@ -139,15 +138,9 @@ const fillHearts = (parent, arr, ind) => {
 
   comments.style.display = 'block';
   if (arr[0] < 4) {
-    commentsText.textContent = 'Bad result';
-    document.querySelectorAll('.emoji').forEach(element => {
-      element.src = 'images/sad.png';
-    });
+    comments.textContent = 'Bad result';
   } else {
-    commentsText.textContent = 'Good result';
-    document.querySelectorAll('.emoji').forEach(element => {
-      element.src = 'images/smile.png';
-    });
+    comments.textContent = 'Good result';
   }
   btnDiv.style.visibility = 'visible';
 };
