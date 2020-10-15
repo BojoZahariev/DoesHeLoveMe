@@ -17,49 +17,55 @@
     <title>The Love Meter</title>
   </head>
   <body>
-    <div class="adds"></div>
-    <div class="mainContainer">
-      <div class="titleDiv">
-        <h1 class="title">The Love Meter</h1>
-      </div>
-
-      <ul id="container"></ul>
-
-      <form id="formContainer">
-        <input id="name1" type="text" placeholder="Your name" required />
-        <img src="images/daisy.png" id="daisy" alt="daisy" />
-        <input id="name2" type="text" placeholder="Your crush" required />
-
-        <div id="btnDiv">
-          <button id="submitBtn" class="mainBtn" type="submit">Go</button>
-          <button id="clearInput" class="mainBtn">Clear</button>
+    <div class="bigContainer">
+      <div class="adds"></div>
+      <div class="mainContainer">
+        <div class="titleDiv">
+          <h1 class="title">The Love Meter</h1>
         </div>
-      </form>
 
-      <div class="resultsDiv">
-        <ul id="results">
-          <li class="resultsPart">
-            <span class="partTitle">Compatibility:</span>
-          </li>
-          <li class="resultsPart">
-            <span class="partTitle">Attraction:</span>
-          </li>
-          <li class="resultsPart">
-            <span class="partTitle">Romance:</span>
-          </li>
-          <li class="resultsPart">
-            <span class="partTitle">Love:</span>
-          </li>
-          <li class="resultsPart">
-            <span class="partTitle">Sex:</span>
-          </li>
-        </ul>
+        <ul id="container"></ul>
+
+        <form id="formContainer">
+          <input id="name1" type="text" placeholder="Your name" required />
+          <img src="images/daisy.png" id="daisy" alt="daisy" />
+          <input id="name2" type="text" placeholder="Your crush" required />
+
+          <div id="btnDiv">
+            <button id="submitBtn" class="mainBtn" type="submit">Go</button>
+            <button id="clearInput" class="mainBtn">Clear</button>
+          </div>
+        </form>
+
+        <div class="resultsDiv">
+          <ul id="results">
+            <li class="resultsPart">
+              <span class="partTitle">Compatibility:</span>
+            </li>
+            <li class="resultsPart">
+              <span class="partTitle">Attraction:</span>
+            </li>
+            <li class="resultsPart">
+              <span class="partTitle">Romance:</span>
+            </li>
+            <li class="resultsPart">
+              <span class="partTitle">Love:</span>
+            </li>
+            <li class="resultsPart">
+              <span class="partTitle">Sex:</span>
+            </li>
+          </ul>
+        </div>
+
+        <p id="comments"></p>
+
+        <footer>
+          <p>We don't store any kind of personal data.</p>
+        </footer>
       </div>
 
-      <p id="comments"></p>
+      <div class="adds"></div>
     </div>
-
-    <div class="adds"></div>
     <script src="script.js"></script>
   </body>
 </html>
