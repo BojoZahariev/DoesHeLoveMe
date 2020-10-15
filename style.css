@@ -8,7 +8,7 @@
 
 .bigContainer {
   font-family: 'Redressed', cursive;
-  max-width: 600px;
+  max-width: 700px;
   margin: auto;
 }
 
@@ -24,6 +24,7 @@ html {
   font-weight: 700;
   text-align: center;
   margin-bottom: 30px;
+  letter-spacing: 0.5px;
 }
 
 #formContainer {
@@ -161,6 +162,7 @@ input:focus {
   text-align: center;
   color: #1c3144;
   font-family: 'Courgette', cursive;
+  font-size: 20px;
   letter-spacing: 0.5px;
 
   -webkit-animation: appear 3s forwards;
@@ -190,7 +192,8 @@ input:focus {
 #comments:before {
   display: block;
   content: '';
-  border-top: solid 3px #019fb6;
+  border-top: solid 3px #f4c095;
+  padding: 10px;
   transform: scaleX(0);
   -webkit-animation: borderExpand 3s forwards;
   animation: borderExpand 3s forwards;
