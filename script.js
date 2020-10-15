@@ -136,7 +136,7 @@ const fillHearts = (parent, arr, ind) => {
 
   comments.style.display = 'block';
   if (arr[0] < 4) {
-    comments.textContent = `The chances are not so good for you and ${name2.value.toUpperCase()} today.Don't give up, just try another day.`;
+    comments.textContent = `It doesn't look so good for you and ${name2.value.toUpperCase()} today.Don't give up, just try another day.`;
   } else {
     comments.textContent = `Things look good for you and ${name2.value.toUpperCase()} today.`;
   }

@@ -6,7 +6,7 @@
   box-sizing: border-box;
 }
 
-.bigContainer {
+.mainContainer {
   font-family: 'Redressed', cursive;
   max-width: 700px;
   margin: auto;
