@@ -92,8 +92,6 @@ const displayResults = arr => {
 
 //display the hearts
 const addHearts = (arr, parent) => {
-  console.log(arr);
-
   let i = 0;
   parent.forEach(element => {
     let b = 0;
@@ -138,9 +136,9 @@ const fillHearts = (parent, arr, ind) => {
 
   comments.style.display = 'block';
   if (arr[0] < 4) {
-    comments.textContent = 'Bad result';
+    comments.textContent = `The chances are not so good for you and ${name2.value.toUpperCase()} today.Don't give up, just try another day.`;
   } else {
-    comments.textContent = 'Good result';
+    comments.textContent = `Looks like you have great chances with ${name2.value.toUpperCase()} today.`;
   }
   btnDiv.style.visibility = 'visible';
 };

@@ -42,6 +42,7 @@ input {
   border-radius: 15px;
   outline: none;
   font-size: 20px;
+  font-weight: 500;
   padding: 3px 20px;
   margin: 0px 10px;
   box-shadow: inset 0.2rem 0.2rem 0.5rem #92b192, inset -0.2rem -0.2rem 0.5rem #e1f3e1;
@@ -49,7 +50,7 @@ input {
   color: #1c3144;
   caret-color: #1c3144;
   border: 2px solid #f4c095;
-  font-family: 'Redressed', cursive;
+  font-family: 'Courgette', cursive;
 }
 
 input:focus {
@@ -110,6 +111,7 @@ input:focus {
   width: 160px;
   display: inline-block;
   text-align: left;
+  color: #1c3144;
 }
 
 .hearts {
@@ -157,12 +159,12 @@ input:focus {
 #comments {
   display: none;
   text-align: center;
-  animation-name: appear;
-  animation-duration: 3s;
-  animation-fill-mode: forwards;
-  -webkit-animation-name: appear;
-  -webkit-animation-duration: 3s;
-  -webkit-animation-fill-mode: forwards;
+  color: #1c3144;
+  font-family: 'Courgette', cursive;
+  letter-spacing: 0.5px;
+
+  -webkit-animation: appear 3s forwards;
+  animation: appear 3s forwards;
 }
 
 @keyframes appear {
@@ -182,6 +184,35 @@ input:focus {
 
   to {
     filter: opacity(1);
+  }
+}
+
+#comments:before {
+  display: block;
+  content: '';
+  border-top: solid 3px #019fb6;
+  transform: scaleX(0);
+  -webkit-animation: borderExpand 3s forwards;
+  animation: borderExpand 3s forwards;
+}
+
+@keyframes borderExpand {
+  from {
+    transform: scaleX(0);
+  }
+
+  to {
+    transform: scaleX(1);
+  }
+}
+
+@-webkit-keyframes borderExpand {
+  from {
+    transform: scaleX(0);
+  }
+
+  to {
+    transform: scaleX(1);
   }
 }
 
