@@ -234,12 +234,49 @@ footer {
   margin: auto;
   bottom: 0;
   text-align: center;
+  opacity: 0.5;
 }
 
 /*MEDIA*/
 
 @media only screen and (max-width: 768px) {
+  .mainContainer {
+    width: 100vw;
+    order: 1;
+  }
+
   .title {
     font-size: 50px;
+    padding: 10px;
+  }
+
+  #formContainer {
+    margin: 0px auto 10px;
+    flex-direction: column;
+  }
+
+  input {
+    margin: 10px;
+    width: 200px;
+    height: 40px;
+    font-size: 18px;
+    padding: 3px 20px;
+  }
+
+  #daisy {
+    width: 60px;
+  }
+
+  #btnDiv {
+    width: 100%;
+    height: 40px;
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 20px;
+  }
+
+  #comments {
+    font-size: 18px;
+    padding: 10px;
   }
 }
