@@ -6,6 +6,10 @@
   box-sizing: border-box;
 }
 
+html {
+  background-color: #ccfccb;
+}
+
 .bigContainer {
   display: flex;
 }
@@ -14,10 +18,6 @@
   font-family: 'Redressed', cursive;
   max-width: 700px;
   margin: auto;
-}
-
-html {
-  background-color: #ccfccb;
 }
 
 .title {
@@ -234,4 +234,12 @@ footer {
   margin: auto;
   bottom: 0;
   text-align: center;
+}
+
+/*MEDIA*/
+
+@media only screen and (max-width: 768px) {
+  .title {
+    font-size: 50px;
+  }
 }
