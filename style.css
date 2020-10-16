@@ -228,7 +228,7 @@ input:focus {
 }
 
 footer {
-  position: absolute;
+  position: fixed;
   left: 0;
   right: 0;
   margin: auto;
@@ -257,8 +257,8 @@ footer {
 
   input {
     margin: 10px;
-    width: 200px;
-    height: 40px;
+
+    height: 35px;
     font-size: 18px;
     padding: 3px 20px;
   }
