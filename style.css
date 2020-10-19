@@ -257,7 +257,7 @@ footer {
 
   input {
     margin: 10px;
-
+    text-align: center;
     height: 35px;
     font-size: 18px;
     padding: 3px 20px;
@@ -273,6 +273,11 @@ footer {
     text-align: center;
     padding: 10px;
     margin-bottom: 20px;
+  }
+  #results {
+    padding: 10px;
+    width: 100vw;
+    max-width: 400px;
   }
 
   #comments {
