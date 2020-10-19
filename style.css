@@ -274,14 +274,31 @@ footer {
     padding: 10px;
     margin-bottom: 20px;
   }
+
   #results {
     padding: 10px;
     width: 100vw;
     max-width: 400px;
   }
 
+  .partTitle {
+    font-size: 20px;
+
+    width: 120px;
+  }
+
+  .hearts {
+    width: 25px;
+    padding: 2px;
+    height: auto;
+  }
+
   #comments {
     font-size: 18px;
-    padding: 10px;
+    padding: 20px;
+  }
+
+  #comments:before {
+    padding: 5px;
   }
 }
