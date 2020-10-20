@@ -2,7 +2,6 @@ const formContainer = document.querySelector('#formContainer');
 const name1 = document.querySelector('#name1');
 const name2 = document.querySelector('#name2');
 const clearInput = document.querySelector('#clearInput');
-const submitBtn = document.querySelector('#submitBtn');
 const btnDiv = document.querySelector('#btnDiv');
 const results = document.querySelector('#results');
 const daisy = document.querySelector('#daisy');
