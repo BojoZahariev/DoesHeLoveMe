@@ -4,6 +4,6 @@
 
 ## Tools: JAVASCRIPT, HTML, CSS
 
-![Image of The Love Meter game](https://github.com/BojoZahariev/TheLoveMeter/blob/master/images/Capture1.PNG)
+![Image of The Love Meter game](https://github.com/BojoZahariev/TheLoveMeter/blob/main/images/Capture1.PNG)
 
-![Image of The Love Meter game](https://github.com/BojoZahariev/TheLoveMeter/blob/master/images/Capture2.PNG)
+![Image of The Love Meter game](https://github.com/BojoZahariev/TheLoveMeter/blob/main/images/Capture2.PNG)
