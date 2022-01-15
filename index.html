@@ -1,70 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <meta name="description" content="Calculate Your Love And Romantic Chances using this Love Meter" />
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon.ico" />
+  <meta name="description" content="Calculate Your Love And Romantic Chances using this Love Meter" />
 
-    <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon.ico" />
 
-    <link href="https://fonts.googleapis.com/css2?family=Redressed&display=swap" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet" />
-    <meta name="theme-color" content="#000000" />
+  <link rel="stylesheet" href="style.css" />
 
-    <title>The Love Meter</title>
-  </head>
-  <body>
-    <div class="bigContainer">
-      <div class="adds"></div>
-      <div class="mainContainer">
-        <div class="titleDiv">
-          <h1 class="title">The Love Meter</h1>
-        </div>
+  <link href="https://fonts.googleapis.com/css2?family=Redressed&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet" />
+  <meta name="theme-color" content="#000000" />
 
-        <form id="formContainer">
-          <input id="name1" type="text" placeholder="Your name" required />
-          <img src="images/daisy.png" id="daisy" alt="daisy" />
-          <input id="name2" type="text" placeholder="Your crush" required />
+  <script src='https://storage.ko-fi.com/cdn/scripts/overlay-widget.js'></script>
+  <title>The Love Meter</title>
+</head>
 
-          <div id="btnDiv">
-            <button id="submitBtn" class="mainBtn" type="submit">Go</button>
-            <button id="clearInput" class="mainBtn">Clear</button>
-          </div>
-        </form>
-
-        <div class="resultsDiv">
-          <ul id="results">
-            <li class="resultsPart">
-              <span class="partTitle">Compatibility:</span>
-            </li>
-            <li class="resultsPart">
-              <span class="partTitle">Attraction:</span>
-            </li>
-            <li class="resultsPart">
-              <span class="partTitle">Romance:</span>
-            </li>
-            <li class="resultsPart">
-              <span class="partTitle">Love:</span>
-            </li>
-            <li class="resultsPart">
-              <span class="partTitle">Sex:</span>
-            </li>
-          </ul>
-        </div>
-
-        <p id="comments"></p>
-
-        <footer>
-          <p>We don't store any personal data.</p>
-        </footer>
+<body>
+  <div class="bigContainer">
+    <div class="adds"></div>
+    <div class="mainContainer">
+      <div class="titleDiv">
+        <h1 class="title">The Love Meter</h1>
       </div>
 
-      <div class="adds"></div>
+      <form id="formContainer">
+        <input id="name1" type="text" placeholder="Your name" required />
+        <img src="images/daisy.png" id="daisy" alt="daisy" />
+        <input id="name2" type="text" placeholder="Your crush" required />
+
+        <div id="btnDiv">
+          <button id="submitBtn" class="mainBtn" type="submit">Go</button>
+          <button id="clearInput" class="mainBtn">Clear</button>
+        </div>
+      </form>
+
+      <div class="resultsDiv">
+        <ul id="results">
+          <li class="resultsPart">
+            <span class="partTitle">Compatibility:</span>
+          </li>
+          <li class="resultsPart">
+            <span class="partTitle">Attraction:</span>
+          </li>
+          <li class="resultsPart">
+            <span class="partTitle">Romance:</span>
+          </li>
+          <li class="resultsPart">
+            <span class="partTitle">Love:</span>
+          </li>
+          <li class="resultsPart">
+            <span class="partTitle">Sex:</span>
+          </li>
+        </ul>
+      </div>
+
+      <p id="comments"></p>
+
+
+      <script>
+        kofiWidgetOverlay.draw('bojo_zahariev', {
+          'type': 'floating-chat',
+          'floating-chat.donateButton.text': 'Support me',
+          'floating-chat.donateButton.background-color': '#00b9fe',
+          'floating-chat.donateButton.text-color': '#fff'
+        });
+      </script>
+
+      <footer>
+        <p>We don't store any personal data.</p>
+      </footer>
+
+
     </div>
 
-    <script src="script.js"></script>
-  </body>
+    <div class="adds"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
 </html>
